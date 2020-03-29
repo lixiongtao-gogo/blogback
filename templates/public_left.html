@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>公共侧边栏</title>
+	<link rel="stylesheet" href="../static/css/base.css">
+	<link rel="stylesheet" href="../static/css/page.css">
+
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/main.js"></script>
+	<script type="text/javascript" src="../static/js/modernizr.js"></script>
+
+</head>
+
+<body>
+	<!--side S-->
+	<div class="super-side-menu">
+		<div class="logo"><a href="public_super_cg.html" target="_parent"><img src="../static/images/logo.png"></a></div>
+		
+		<div class="side-menu">
+			<ul>
+				<li class="on"><a href="{% url 'App:low' %}" target="Mainindex"><i class="ico-1"></i>文章管理</a></li>
+				<li><a href="{% url 'App:left_cate' %}" target="Mainindex"><i class="ico-2"></i>分类管理</a></li>
+				<li><a href="{% url 'App:left_article' %}" target="Mainindex"><i class="ico-3"></i>文章发布</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--side E-->
+
+<script type="text/javascript">
+	$(function(){
+		$('.side-menu li').click(function(){
+			$(this).addClass('on').siblings().removeClass('on');
+		})
+	})
+</script>
+
+</body></html>
